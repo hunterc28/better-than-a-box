@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Taste — we tell you exactly what furniture to buy</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="We find you cool, quality secondhand furniture so your apartment doesn't look like your freshman dorm with a Wall Street paycheck. $50 a piece, $250 a room. NYC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Oswald:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#AE0504;
+  --cream:#FDFAF2;
+  --pale:#EFF6FF;
+  --blue:#2A85B4;
+  --ink:#2B1A19;
+  --rule:1.5px solid var(--red);
+  --script:'Caveat Brush', cursive;
+  --display:'Oswald', Impact, sans-serif;
+  --body:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px;margin:0 auto;padding:0 24px}
+
+/* ---------- type ---------- */
+h1,h2,h3{margin:0;font-family:var(--display);text-transform:uppercase;line-height:.95;letter-spacing:.01em;font-weight:700}
+h2{font-size:clamp(2.2rem,6vw,4rem);color:var(--red);line-height:1.05}
+h3{font-size:1.15rem;letter-spacing:.06em;font-weight:500}
+p{margin:0 0 1.1em}
+a{color:var(--red)}
+.script{font-family:var(--script);text-transform:none;letter-spacing:.06em}
+.eyebrow{
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.22em;
+  font-size:.78rem;font-weight:500;color:var(--blue);margin:0 0 14px
+}
+.lede{font-size:clamp(1.05rem,2.3vw,1.3rem);line-height:1.5}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(253,250,242,.93);
+  backdrop-filter:blur(8px);
+  border-bottom:var(--rule);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.mark{font-family:var(--script);font-size:1.9rem;color:var(--red);letter-spacing:.05em;text-decoration:none;line-height:1}
+nav .navlinks{display:flex;align-items:center;gap:26px}
+nav .navlinks a.txt{
+  font-family:var(--display);text-transform:uppercase;font-size:.8rem;
+  letter-spacing:.12em;text-decoration:none;color:var(--ink)
+}
+nav .navlinks a.txt:hover{color:var(--red)}
+@media(max-width:720px){nav .navlinks a.txt{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-block;font-family:var(--display);text-transform:uppercase;
+  font-size:.85rem;letter-spacing:.1em;font-weight:500;
+  padding:13px 22px;border:var(--rule);border-radius:2px;
+  text-decoration:none;cursor:pointer;transition:.15s;
+  background:var(--red);color:var(--cream);
+}
+.btn:hover{background:#8d0403;border-color:#8d0403}
+.btn.ghost{background:transparent;color:var(--red)}
+.btn.ghost:hover{background:var(--red);color:var(--cream)}
+.btn.blue{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.blue:hover{background:#20699005;background:#1f6a90;border-color:#1f6a90}
+
+/* ---------- sections ---------- */
+section{padding:88px 0;border-top:var(--rule)}
+section:first-of-type{border-top:none}
+.sec-blue{background:var(--pale)}
+
+/* ---------- hero ---------- */
+.hero{padding:0;border:none}
+.hero-inner{
+  position:relative;padding:76px clamp(38px,5vw,60px) 88px;max-width:1080px;margin:0 auto;
+}
+.hero-frame{
+  position:absolute;inset:28px 24px 24px;border:var(--rule);border-radius:14px;pointer-events:none
+}
+.hero h1{
+  font-family:var(--script);text-transform:none;color:var(--red);
+  font-size:clamp(3.6rem,13vw,8rem);line-height:1.02;letter-spacing:.04em;
+  margin:0 0 18px;position:relative
+}
+.hero .tag{
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.2em;
+  font-size:clamp(.7rem,2vw,.9rem);color:var(--blue);margin-bottom:34px;position:relative
+}
+.hero .pitch{max-width:640px;position:relative}
+.hero .pitch p{font-size:clamp(1.1rem,2.6vw,1.45rem);line-height:1.45}
+.hero .price{
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;
+  font-size:1.05rem;color:var(--red);margin:26px 0 22px;position:relative
+}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;position:relative}
+.hero-art{
+  position:absolute;right:26px;bottom:24px;width:min(38%,330px);opacity:.95;pointer-events:none
+}
+@media(max-width:1080px){.hero-art{display:none}}
+@media(max-width:620px){.hero-frame{inset:22px 10px 16px}}
+
+/* ---------- hall of shame ---------- */
+.shame{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px}
+.shame-card{border:var(--rule);border-radius:8px;overflow:hidden;background:var(--cream)}
+.shame-img{
+  aspect-ratio:4/3;background:var(--pale);border-bottom:var(--rule);
+  display:flex;align-items:center;justify-content:center;padding:18px
+}
+.shame-img svg{width:100%;height:100%}
+.shame-card .body{padding:16px 18px 20px}
+.shame-card h3{color:var(--red);font-size:1.05rem;letter-spacing:.08em;margin-bottom:8px}
+.shame-card p{font-size:.95rem;margin:0}
+
+/* ---------- quiz ---------- */
+.quiz{margin-top:64px;border:var(--rule);border-radius:10px;padding:clamp(22px,4vw,38px);background:var(--cream)}
+.quiz h3{font-size:clamp(1.4rem,3.4vw,2rem);color:var(--red);letter-spacing:.02em;font-weight:700;margin-bottom:6px}
+.quiz .sub{font-size:.95rem;margin-bottom:22px}
+.q{display:flex;gap:13px;align-items:flex-start;padding:12px 0;border-top:1px solid rgba(174,5,4,.18);cursor:pointer}
+.q:first-of-type{border-top:none}
+.q input{
+  appearance:none;flex:0 0 auto;width:21px;height:21px;margin:2px 0 0;
+  border:var(--rule);border-radius:3px;cursor:pointer;position:relative;background:transparent
+}
+.q input:checked{background:var(--red)}
+.q input:checked::after{
+  content:"✕";position:absolute;inset:0;color:var(--cream);
+  font-size:14px;line-height:19px;text-align:center;font-weight:700
+}
+.q span{font-size:1rem}
+.verdict{margin-top:26px;padding:22px;border:var(--rule);border-radius:6px;background:var(--pale);display:none}
+.verdict.show{display:block}
+.verdict .score{font-family:var(--display);text-transform:uppercase;color:var(--red);font-size:1.5rem;letter-spacing:.04em;margin-bottom:6px}
+.verdict p{margin:0}
+
+/* ---------- value prop ---------- */
+.value p{font-size:clamp(1.15rem,2.8vw,1.5rem);line-height:1.45;margin-bottom:1em}
+.value .kicker{font-family:var(--display);text-transform:uppercase;color:var(--red);letter-spacing:.06em;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.15}
+
+/* ---------- how it works ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px;margin-top:44px}
+.step .num{
+  font-family:var(--display);font-size:3.4rem;color:var(--blue);line-height:1.15;margin-bottom:16px;opacity:.9
+}
+.step h3{color:var(--red);margin-bottom:8px;font-size:1.1rem}
+.step p{font-size:.98rem;margin:0}
+.howfoot{margin-top:44px;font-family:var(--script);font-size:clamp(1.3rem,3.4vw,2rem);color:var(--blue);line-height:1.25}
+
+/* ---------- pricing ---------- */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:44px}
+.tier{border:var(--rule);border-radius:10px;padding:clamp(24px,3.4vw,34px);background:var(--cream);display:flex;flex-direction:column}
+.tier.hi{background:var(--pale)}
+.tier .need{font-size:.97rem;margin-bottom:22px}
+.tier .name{font-family:var(--display);text-transform:uppercase;color:var(--red);font-size:1.6rem;letter-spacing:.03em;line-height:1.25}
+.tier .amt{font-family:var(--display);font-size:3.2rem;color:var(--red);line-height:1.15;margin:14px 0 24px}
+.tier ul{list-style:none;padding:0;margin:0 0 26px}
+.tier li{padding:9px 0 9px 26px;border-top:1px solid rgba(174,5,4,.16);font-size:.96rem;position:relative}
+.tier li::before{content:"—";position:absolute;left:0;color:var(--blue)}
+.tier .btn{margin-top:auto;text-align:center}
+.bothnote{margin-top:28px;font-size:.95rem;text-align:center;color:var(--red);font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}
+
+/* ---------- faq ---------- */
+.faq{margin-top:40px;border-top:var(--rule)}
+details{border-bottom:var(--rule)}
+summary{
+  cursor:pointer;list-style:none;padding:20px 40px 20px 0;position:relative;
+  font-family:var(--display);text-transform:uppercase;font-size:1rem;letter-spacing:.04em;color:var(--red)
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:16px;font-size:1.6rem;line-height:1;color:var(--blue)}
+details[open] summary::after{content:"–"}
+details .a{padding:0 0 22px;font-size:1rem;max-width:70ch}
+
+/* ---------- shopper ---------- */
+.shopper{text-align:center}
+.shopper .narrow > p{font-size:1.08rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--red);color:var(--cream);padding:64px 0 40px;border-top:var(--rule)}
+footer .mark{color:var(--cream);font-size:3rem;line-height:1.15;display:inline-block;margin-bottom:14px}
+footer a{color:var(--cream)}
+.frow{display:flex;flex-wrap:wrap;gap:34px;justify-content:space-between;align-items:flex-start}
+.fcol{min-width:180px}
+.fcol h4{font-family:var(--display);text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:500;margin:0 0 10px;opacity:.75}
+.fcol a,.fcol p{display:block;font-size:.97rem;margin:0 0 7px;text-decoration:none}
+.fcol a:hover{text-decoration:underline}
+.fine{margin-top:44px;padding-top:20px;border-top:1px solid rgba(253,250,242,.28);font-size:.8rem;opacity:.75;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+.todo{background:#2B1A19;color:#FDFAF2;font-size:.78rem;padding:10px 24px;text-align:center;letter-spacing:.04em}
+.todo b{color:#F5A9A8}
+</style>
+</head>
+<body>
+
+<div class="todo">DRAFT — placeholders left to fill: <b>Instagram handle</b>, <b>contact email</b>, <b>Zelle details</b>, <b>form links</b>, <b>hall-of-shame photos</b>.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="mark">good taste</a>
+    <div class="navlinks">
+      <a href="#how" class="txt">How it works</a>
+      <a href="#pricing" class="txt">Pricing</a>
+      <a href="#faq" class="txt">FAQ</a>
+      <a href="#pricing" class="btn">Find me furniture</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-frame"></div>
+    <h1>good taste</h1>
+    <div class="tag">Secondhand furniture, hand-picked · NYC</div>
+    <div class="pitch">
+      <p>Listen, you're an adult now. How about you prove it and buy a real couch.</p>
+      <p>We help you furnish and decorate your place — sustainably, efficiently, and within your budget. Like we will literally tell you exactly what to buy so that it looks good.</p>
+    </div>
+    <div class="price">$50 a piece &nbsp;·&nbsp; $250 a room</div>
+    <div class="cta">
+      <a href="#pricing" class="btn">Find me furniture</a>
+      <a href="#pricing" class="btn ghost">Please just fix all of it</a>
+    </div>
+
+    <svg class="hero-art" viewBox="0 0 300 260" fill="none" stroke="#AE0504" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M40 12h230"/>
+      <path d="M92 12v42M150 12v66M208 12v34"/>
+      <path d="M70 54h44l-8 26H78z"/><path d="M78 80c0 6 7 10 14 10s14-4 14-10"/>
+      <path d="M124 78h52l-10 30h-32z"/><ellipse cx="150" cy="110" rx="9" ry="4"/>
+      <path d="M190 46h36l-7 22h-22z"/><ellipse cx="208" cy="70" rx="7" ry="3.5"/>
+      <path d="M96 150c0-10 6-16 16-16h56c10 0 16 6 16 16v10"/>
+      <path d="M92 158c0-8 5-12 12-12h72c7 0 12 4 12 12v6c0 5-4 9-9 9h-78c-5 0-9-4-9-9z"/>
+      <path d="M100 181v46M180 181v46M108 181v40M172 181v40"/>
+      <path d="M96 190h88"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===================== THE PROBLEM ===================== -->
+<section id="problem">
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <h2>Hall of shame</h2>
+    <p class="lede" style="max-width:56ch;margin-top:18px">Four apartments. You live in one of them. We're not going to tell you which.</p>
+
+    <div class="shame">
+      <div class="shame-card">
+        <div class="shame-img">
+          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
+            <path d="M40 116V70h48v46"/><path d="M40 88h48"/>
+            <path d="M112 116V86h48v30"/><path d="M120 86V74h32v12"/>
+            <path d="M30 116h140"/><path d="M64 70V54"/><path d="M56 54h16"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>The serial killer</h3>
+          <p>Like this literally is viable evidence in a court of law.</p>
+        </div>
+      </div>
+
+      <div class="shame-card">
+        <div class="shame-img">
+          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
+            <path d="M52 116V96h96v20"/><path d="M52 106h96"/>
+            <path d="M100 96V62"/><circle cx="100" cy="56" r="6"/>
+            <path d="M34 116h132"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>The minimalist</h3>
+          <p>Marie Kondo is crying somewhere.</p>
+        </div>
+      </div>
+
+      <div class="shame-card">
+        <div class="shame-img">
+          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
+            <path d="M38 116V88h60v28"/><path d="M38 96h60"/>
+            <path d="M116 116V78h20v38M136 78h18v38"/>
+            <path d="M120 78v-8h12v8"/>
+            <path d="M30 116h140"/><path d="M60 70h30v14H60z"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>The bachelor pad</h3>
+          <p>It's called that because it's the reason you're single.</p>
+        </div>
+      </div>
+
+      <div class="shame-card">
+        <div class="shame-img">
+          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
+            <path d="M46 116V92h108v24"/><path d="M46 100h108"/>
+            <rect x="78" y="56" width="44" height="26" rx="2"/>
+            <path d="M30 116h140"/><path d="M100 82v10"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3>The NPC</h3>
+          <p>Having a personality is free (write that down).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- quiz -->
+    <div class="quiz" id="quiz">
+      <h3>Is your apartment cooked?</h3>
+      <p class="sub">Check every one that applies. Be honest, nobody's watching.</p>
+
+      <label class="q"><input type="checkbox"><span>Your TV is on a cardboard box, an Ikea Lack table, or, let's be real, the floor.</span></label>
+      <label class="q"><input type="checkbox"><span>You have one plant that is objectively dead.</span></label>
+      <label class="q"><input type="checkbox"><span>Your "art" is unframed and dangling from a Command strip.</span></label>
+      <label class="q"><input type="checkbox"><span>Your mattress is on the ground like you're glamping.</span></label>
+      <label class="q"><input type="checkbox"><span>You eat your corporate bowl slop standing up.</span></label>
+      <label class="q"><input type="checkbox"><span>You have a weight bench or alcohol stash displayed in the common space like you're curating an immersive exhibit called "Blacking Out In Beta."</span></label>
+      <label class="q"><input type="checkbox"><span>You can't bring people over without them being like "wait when did you move in?"</span></label>
+      <label class="q"><input type="checkbox"><span>Your apartment is generally functional so you feel fundamentally insulted by these questions but also you recognize that it's kind of ugly.</span></label>
+
+      <div class="verdict" id="verdict">
+        <div class="score" id="verdict-title"></div>
+        <p id="verdict-body"></p>
+        <p style="margin-top:18px"><a href="#pricing" class="btn">Okay, fix it</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALUE PROP ===================== -->
+<section class="sec-blue value">
+  <div class="narrow">
+    <div class="eyebrow">Why us</div>
+    <p class="kicker">We're people with good taste and time to scroll.</p>
+    <p style="margin-top:20px">We find you cool, quality shit so your apartment doesn't look like your freshman dorm with a Wall Street paycheck.</p>
+    <p>If they wanted to, they would — i.e., if your friends could help your sorry ass they would have done it already. But don't worry, that's where we come in.</p>
+    <p style="font-family:var(--display);text-transform:uppercase;color:var(--red);letter-spacing:.05em;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;margin-top:28px">We do this professionally. We do it well. And we can do it for you.</p>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>Three steps</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Tell us about your place</h3>
+        <p>Fill out a quick form: your need, your budget, your space, and your vibe.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>We send you the goods</h3>
+        <p>Within a few days, you'll get a curated list of options, each one hand-picked for your space and your taste.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>You grab it</h3>
+        <p>Message the sellers, arrange pickup, and welcome to having a real apartment. We'll send you a copy-paste template so you don't even have to think.</p>
+      </div>
+    </div>
+    <p class="howfoot">Your date doesn't fear for their life when they see your bedroom.</p>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="sec-blue">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2>Pick your tier</h2>
+
+    <div class="tiers">
+      <div class="tier">
+        <p class="need">Need one thing? A couch. A coffee table. A lamp. Something specific that you've been meaning to buy for 8 months and haven't.</p>
+        <div class="name">Quick Fix</div>
+        <div class="amt">$50</div>
+        <ul>
+          <li>5 hand-picked listings from Marketplace, Craigslist, AptDeco, and beyond</li>
+          <li>Each one curated to your space, style, and budget</li>
+          <li>Copy-paste seller message template, because you're not going to write one yourself</li>
+          <li>One free swap if your top pick sells before you grab it</li>
+          <li>Delivered within 3 days</li>
+        </ul>
+        <a href="#" class="btn" data-form="single">Find me adult furniture</a>
+      </div>
+
+      <div class="tier hi">
+        <p class="need">Need a whole room? Your living room looks like you moved in yesterday and you moved in two years ago. Let's fix that.</p>
+        <div class="name">Room Refresh</div>
+        <div class="amt">$250</div>
+        <ul>
+          <li>A full plan for one room: 5 furniture pieces, 5–6 options each</li>
+          <li>Delivered as a styled doc with rationale, layout, and shopping order</li>
+          <li>Copy-paste seller messages and a "where to start" guide for the chronically overwhelmed</li>
+          <li>One free swap per piece if top picks sell out</li>
+          <li>Delivered within 7 days</li>
+        </ul>
+        <a href="#" class="btn blue" data-form="room">Get my room guest ready</a>
+      </div>
+    </div>
+
+    <p class="bothnote">Both tiers: pay upfront · NYC only for now (Manhattan + Brooklyn) · one free revision if we miss the brief</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+  <div class="narrow">
+    <div class="eyebrow">Stuff people ask</div>
+    <h2>Questions</h2>
+
+    <div class="faq">
+      <details>
+        <summary>What if I don't like the options you send?</summary>
+        <div class="a">If we missed the mark — wrong style, wrong scale, wrong vibe — we'll redo it for free. If we nailed the brief and you just want more options, another round is $25 (Quick Fix) or $50 (Room Refresh).</div>
+      </details>
+      <details>
+        <summary>What if the listing sells before I can grab it?</summary>
+        <div class="a">Marketplace moves fast. Message your top picks within 24 hours of getting your finds — that's the rule. If your favorite sells before you can grab it, we'll send one free replacement option. After that, we can find more for $25.</div>
+      </details>
+      <details>
+        <summary>How fast do I actually need to act?</summary>
+        <div class="a">Fast. Within a day of getting your finds is ideal. The good stuff sells in hours, not days. We'll send you a copy-paste seller message so you don't have to think — just send it.</div>
+      </details>
+      <details>
+        <summary>Where do you source from?</summary>
+        <div class="a">Real quality stuff is typically secondhand or handmade. So we frequent Facebook Marketplace, AptDeco, Kaiyo, Chairish, Etsy… but we go wherever the good stuff is.</div>
+      </details>
+      <details>
+        <summary>Do I have to do anything besides fill out the form?</summary>
+        <div class="a">Not really. We send you the finds, you message the sellers (we give you the template), you arrange pickup. We don't transact for you — you handle the actual buying.</div>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <div class="a">Fill out the form first. We'll look it over and send you a Zelle request, usually within a few hours. Work starts once it's paid.</div>
+      </details>
+      <details>
+        <summary>Can I get a refund?</summary>
+        <div class="a">No refunds once we've delivered your finds, but we're not going to leave you hanging. If something's off, tell us — we'll fix it. The free revision is there for exactly this.</div>
+      </details>
+      <details>
+        <summary>Why should I pay for this when I could just ask my aesthetic friend?</summary>
+        <div class="a">Because you haven't yet, and you're not going to. Also: your friend doesn't actually have time, will give you three options that are all wrong, and now you owe them a favor. We're better at this and we don't make it weird.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SHOPPER ===================== -->
+<section class="sec-blue shopper" id="shopper">
+  <div class="narrow">
+    <div class="eyebrow">Become a shopper</div>
+    <h2>We're not hiring yet</h2>
+    <p style="margin-top:22px">But we will be.</p>
+    <p>We're building a network of people with great taste who want to source cool furniture for clients in their city. If "scrolling Marketplace and getting paid for it" sounds like your kind of side hustle, get on the list.</p>
+    <p>We'll reach out when we're ready to bring on shoppers in your area.</p>
+    <p style="margin-top:26px"><a href="#" class="btn" data-form="shopper">Get on the list</a></p>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <div class="fcol">
+        <span class="mark">good taste</span>
+        <p style="opacity:.8;font-size:.9rem">NYC only — Manhattan + Brooklyn</p>
+      </div>
+      <div class="fcol">
+        <h4>Get started</h4>
+        <a href="#" data-form="single">Quick Fix — $50</a>
+        <a href="#" data-form="room">Room Refresh — $250</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="fcol">
+        <h4>Elsewhere</h4>
+        <a href="#" id="ig">Instagram — @handle-tbd</a>
+        <a href="#" id="email">hello@goodtaste.tbd</a>
+        <a href="#shopper">Want to be a shopper? Get on the list →</a>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© <span id="yr"></span> Good Taste</span>
+      <span>Payment by Zelle · Pay upfront · One free revision</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* quiz */
+(function(){
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#quiz input[type=checkbox]'));
+  var box = document.getElementById('verdict');
+  var title = document.getElementById('verdict-title');
+  var body = document.getElementById('verdict-body');
+
+  var tiers = [
+    { max:0, t:"Suspicious.",
+      b:"Either you're lying, you already paid someone, or you don't actually live there. Scroll back up and read them again." },
+    { max:2, t:"Mildly cooked.",
+      b:"You're one dead plant away from a real problem. This is the cheapest it will ever be to fix — one piece, fifty bucks, done." },
+    { max:5, t:"Cooked.",
+      b:"This is not a vibe, it's a phase you've been in for two years. Good news: a room is $250 and takes a week." },
+    { max:8, t:"Extremely cooked.",
+      b:"We're not mad, we're just going to need full access. Start with a room and we'll work outward before anyone else sees this." }
+  ];
+
+  function update(){
+    var n = boxes.filter(function(b){ return b.checked; }).length;
+    var tier = tiers.find(function(x){ return n <= x.max; });
+    title.textContent = n + "/8 — " + tier.t;
+    body.textContent = tier.b;
+    box.classList.add('show');
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', update); });
+})();
+
+/* form buttons — placeholder until Tally forms are live */
+document.querySelectorAll('[data-form]').forEach(function(el){
+  el.addEventListener('click', function(e){
+    e.preventDefault();
+    alert("The intake form isn't wired up yet — this is where the " + el.dataset.form + " form will open.");
+  });
+});
+</script>
+</body>
+</html>
