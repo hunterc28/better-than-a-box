@@ -64,6 +64,7 @@ nav .navlinks a.txt{
 }
 nav .navlinks a.txt:hover{color:var(--red)}
 @media(max-width:720px){nav .navlinks a.txt{display:none}}
+@media(max-width:380px){nav .mark{font-size:1.55rem}}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -160,6 +161,24 @@ section:first-of-type{border-top:none}
 .step p{font-size:.98rem;margin:0}
 .howfoot{margin-top:44px;font-family:var(--script);font-size:clamp(1.3rem,3.4vw,2rem);color:var(--blue);line-height:1.25}
 
+/* ---------- problem beats (added per messaging brief) ---------- */
+.beats{margin-top:42px;display:grid;gap:4px}
+.beat{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;padding:22px 0;border-top:1px solid rgba(174,5,4,.2)}
+.beat:first-child{border-top:none}
+.beat .bn{font-family:var(--display);font-size:1.5rem;color:var(--blue);line-height:1.15;letter-spacing:.04em}
+.beat h3{color:var(--red);font-size:1.05rem;margin-bottom:6px}
+.beat p{margin:0;font-size:1.02rem}
+.beatfoot{margin-top:38px;font-family:var(--script);font-size:clamp(1.3rem,3.4vw,2rem);color:var(--blue);line-height:1.3}
+@media(max-width:520px){.beat{grid-template-columns:1fr;gap:2px}.beat .bn{line-height:1.3;margin-bottom:6px}}
+
+/* ---------- alternatives comparison (added per messaging brief) ---------- */
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:44px}
+.vscard{border:var(--rule);border-radius:8px;padding:24px;background:var(--cream)}
+.vscard h3{color:var(--red);font-size:1.05rem;margin-bottom:10px}
+.vscard p{margin:0;font-size:.98rem}
+.vsfoot{margin-top:40px;max-width:62ch}
+.vsfoot .big{font-family:var(--display);text-transform:uppercase;color:var(--red);letter-spacing:.05em;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;margin-top:14px}
+
 /* ---------- pricing ---------- */
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:44px}
 .tier{border:var(--rule);border-radius:10px;padding:clamp(24px,3.4vw,34px);background:var(--cream);display:flex;flex-direction:column}
@@ -210,6 +229,7 @@ footer a{color:var(--cream)}
   <div class="wrap">
     <a href="#top" class="mark">good taste</a>
     <div class="navlinks">
+      <a href="#problem-beats" class="txt">The problem</a>
       <a href="#why" class="txt">Why us</a>
       <a href="#how" class="txt">How it works</a>
       <a href="#pricing" class="txt">Pricing</a>
@@ -249,17 +269,86 @@ footer a{color:var(--cream)}
   </div>
 </section>
 
+<!-- ===================== THE PROBLEM =====================
+     Added per messaging brief: the three beats (trigger / awareness /
+     paralysis). The brief's "Problem" slot had no equivalent on the live
+     site — the old "problem" id belongs to the Hall of Shame, which is
+     now a shareable bit further down, so this is a new section. -->
+<section class="sec-blue" id="problem-beats">
+  <div class="narrow">
+    <div class="eyebrow">The problem</div>
+    <h2>It's not your taste</h2>
+    <p class="lede" style="max-width:56ch;margin-top:18px">Pregame on Saturday and your TV's still on a cardboard box?</p>
+
+    <div class="beats">
+      <div class="beat">
+        <div class="bn">01</div>
+        <div>
+          <h3>Something forces the issue</h3>
+          <p>People are coming over. A date, your parents, the group chat, a roommate moving in Monday. Suddenly the apartment has an audience.</p>
+        </div>
+      </div>
+      <div class="beat">
+        <div class="bn">02</div>
+        <div>
+          <h3>You know it looks bad</h3>
+          <p>You just can't say why, which is somehow worse. Everything in there is fine on its own and wrong together.</p>
+        </div>
+      </div>
+      <div class="beat">
+        <div class="bn">03</div>
+        <div>
+          <h3>So you buy nothing</h3>
+          <p>Because the only thing worse than an empty room is an empty room with the wrong $400 couch in it. And that's where you've been for two years.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="beatfoot">Nobody wants a rug in the abstract. They want one Thursday night because people are coming Saturday.</p>
+  </div>
+</section>
+
 <!-- ===================== WHY US ===================== -->
-<section class="sec-blue value" id="why">
+<section class="value" id="why">
   <div class="narrow">
     <div class="eyebrow">Why us</div>
-    <p class="kicker">Is your apartment ugly and dumb? Do you wish you had an older sister who'd just tell you what to buy?</p>
-    <p style="margin-top:22px">You've known it's bad for two years. What you're missing isn't money. It's the person who walks in, looks around, says "absolutely not," and texts you five links before she leaves.</p>
+    <p class="kicker">Is your apartment ugly and dumb? Do you wish somebody with great taste would just tell you what to buy?</p>
+    <p style="margin-top:22px">You've known it's bad for two years. What you're missing isn't money. It's the person who walks in, looks around, says "absolutely not," and texts you five links before they leave. The friend with great taste you don't actually have.</p>
     <p>That's the whole service. We're people with good taste and time to scroll. We find you cool, quality shit so your apartment doesn't look like your freshman dorm with a Wall Street paycheck.</p>
     <p>And if they wanted to, they would — meaning if your friends were going to fix this for you, they'd have done it by now.</p>
     <p style="margin-top:26px">Also, you don't have time. You get home from work and unzip your Patagonia. Exhausted, you flip on the glaring overhead light to reveal a living room decorated with nothing but a standing desk and a leftover box of White Claws. You are not about to spend Saturday comparison-shopping sofas, and we both know it.</p>
     <p style="font-family:var(--display);text-transform:uppercase;color:var(--red);letter-spacing:.05em;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.2;margin-top:28px">We do this professionally. We do it well. And we can do it for you.</p>
     <p style="margin-top:26px"><a href="#pricing" class="btn">Okay, fix it</a></p>
+  </div>
+</section>
+
+<!-- ===================== WHY NOT ===================== 
+     Added per messaging brief: three-column alternatives comparison.
+     No equivalent existed on the live site. -->
+<section class="sec-blue" id="whynot">
+  <div class="wrap">
+    <div class="eyebrow">Why not just…</div>
+    <h2>Your other options</h2>
+
+    <div class="vs">
+      <div class="vscard">
+        <h3>Hire a designer</h3>
+        <p>Overkill. You need a lamp, not a "vision." And a vision costs more than everything you're trying to buy.</p>
+      </div>
+      <div class="vscard">
+        <h3>Ask AI</h3>
+        <p>It'll make you a mood board. It has no taste you trust, it can't find the $80 dresser on Marketplace, and it definitely can't get it up four flights.</p>
+      </div>
+      <div class="vscard">
+        <h3>Ask your friend with taste</h3>
+        <p>Actually works. But it's a favor, and you only get to cash it in once. You've probably already spent it.</p>
+      </div>
+    </div>
+
+    <div class="vsfoot">
+      <p>A real person with taste picks the actual pieces — used, affordable, and still available — and gets them into your apartment.</p>
+      <p class="big">You get the friend without owing the favor.</p>
+    </div>
   </div>
 </section>
 
