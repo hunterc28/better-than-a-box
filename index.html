@@ -131,9 +131,9 @@ section:first-of-type{border-top:none}
 .shame-card{border:var(--rule);border-radius:8px;overflow:hidden;background:var(--cream)}
 .shame-img{
   aspect-ratio:4/3;background:var(--pale);border-bottom:var(--rule);
-  display:flex;align-items:center;justify-content:center;padding:18px
+  overflow:hidden
 }
-.shame-img svg{width:100%;height:100%}
+.shame-img img{width:100%;height:100%;object-fit:cover;display:block}
 .shame-card .body{padding:16px 18px 20px}
 .shame-card h3{color:var(--red);font-size:1.05rem;letter-spacing:.08em;margin-bottom:8px}
 .shame-card p{font-size:.95rem;margin:0}
@@ -174,7 +174,10 @@ section:first-of-type{border-top:none}
 
 /* ---------- alternatives comparison (added per messaging brief) ---------- */
 .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:44px}
-.vscard{border:var(--rule);border-radius:8px;padding:24px;background:var(--cream)}
+.vscard{border:var(--rule);border-radius:8px;padding:24px;background:var(--cream);display:flex;flex-direction:column}
+.vscard.us{background:var(--pale);border-width:2.5px}
+.vscard .tagline{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--blue);margin-bottom:10px}
+.vscard .pick{margin-top:auto;padding-top:16px}
 .vscard h3{color:var(--red);font-size:1.05rem;margin-bottom:10px}
 .vscard p{margin:0;font-size:.98rem}
 
@@ -268,13 +271,44 @@ footer a{color:var(--cream)}
   </div>
 </section>
 
+<!-- ===================== WHY NOT ===================== 
+     Added per messaging brief: three-column alternatives comparison.
+     No equivalent existed on the live site. -->
+<section class="sec-blue" id="options">
+  <div class="wrap">
+    <div class="eyebrow">Pick one</div>
+    <h2>Your options</h2>
 
+    <div class="vs">
+      <div class="vscard">
+        <h3>Hire a designer</h3>
+        <p>Overkill. You need a lamp, not a "vision." And a vision costs more than everything you're trying to buy.</p>
+      </div>
+      <div class="vscard">
+        <h3>Ask AI</h3>
+        <p>You're not trying to impress a chatbot on your second date. Why is it picking your couch? Also, it can't find the $80 dresser on Marketplace, and it definitely can't get it up four flights.</p>
+      </div>
+      <div class="vscard">
+        <h3>Ask your friend with taste</h3>
+        <p>Actually works. But it's a favor, you only get one, and you already spent it on the move.</p>
+      </div>
+      <div class="vscard us">
+        <div class="tagline">From $50</div>
+        <h3>Ask us</h3>
+        <p>Five hand-picked listings for your actual space, your actual budget, in three days. Plus the message to send the seller, so you don't have to write it.</p>
+        <p class="pick"><a href="#pricing" class="btn">Find me furniture</a></p>
+      </div>
+    </div>
+
+    <p class="brunch">We're the friend with taste. Minus the part where you owe us brunch.</p>
+  </div>
+</section>
 
 <!-- ===================== THE QUIZ =====================
      Moved here per copy-edits v2: the checklist used to sit inside the
      Hall of Shame section; it is now the second section on the page and
      owns the #quiz-section anchor the nav points at. -->
-<section class="sec-blue" id="quiz-section">
+<section id="quiz-section">
   <div class="wrap">
     <div class="eyebrow">The quiz</div>
     <div class="quiz" id="quiz">
@@ -313,40 +347,13 @@ footer a{color:var(--cream)}
 </section>
 
 <!-- ===================== WHY US ===================== -->
-<section class="value" id="why">
+<section class="sec-blue value" id="why">
   <div class="narrow">
     <div class="eyebrow">Why us</div>
     <h2>Listen, you're an adult now. Prove it and buy a real couch.</h2>
     <p style="margin-top:24px">You don't need a designer. You need the friend who walks in, looks around, says "absolutely not," and texts you five links before they leave.</p>
     <p>That's us. We're people with good taste and time to scroll. We find you cool, quality stuff so your apartment stops looking like your freshman dorm with a Wall Street paycheck.</p>
     <p style="margin-top:26px"><a href="#pricing" class="btn">Okay, fix it</a></p>
-  </div>
-</section>
-
-<!-- ===================== WHY NOT ===================== 
-     Added per messaging brief: three-column alternatives comparison.
-     No equivalent existed on the live site. -->
-<section class="sec-blue" id="whynot">
-  <div class="wrap">
-    <div class="eyebrow">Why not just…</div>
-    <h2>Your other options</h2>
-
-    <div class="vs">
-      <div class="vscard">
-        <h3>Hire a designer</h3>
-        <p>Overkill. You need a lamp, not a "vision." And a vision costs more than everything you're trying to buy.</p>
-      </div>
-      <div class="vscard">
-        <h3>Ask AI</h3>
-        <p>You're not trying to impress a chatbot on your second date. Why is it picking your couch? Also, it can't find the $80 dresser on Marketplace, and it definitely can't get it up four flights.</p>
-      </div>
-      <div class="vscard">
-        <h3>Ask your friend with taste</h3>
-        <p>Actually works. But it's a favor, you only get one, and you already spent it on the move.</p>
-      </div>
-    </div>
-
-    <p class="brunch">We're the friend with taste. Minus the part where you owe us brunch.</p>
   </div>
 </section>
 
@@ -424,19 +431,14 @@ footer a{color:var(--cream)}
 <!-- ===================== HALL OF SHAME + QUIZ ===================== -->
 <section id="problem">
   <div class="wrap">
-    <div class="eyebrow">Hall of shame</div>
-    <h2>Four apartments</h2>
+    <div class="eyebrow">Four apartments</div>
+    <h2>Hall of shame</h2>
     <p class="lede" style="max-width:58ch;margin-top:18px">You live in one of them. We're not going to tell you which. It's not you. It's everything behind you.</p>
 
     <div class="shame">
       <div class="shame-card">
         <div class="shame-img">
-          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
-            <path d="M40 116V70h48v46"/><path d="M40 88h48"/>
-            <path d="M112 116V86h48v30"/><path d="M120 86V74h32v12"/>
-            <path d="M30 116h140"/><path d="M64 70V54"/><path d="M56 54h16"/>
-          </svg>
+          <img src="img/serial-killer.jpg" alt="A large, almost entirely empty bedroom with bare walls, a laundry basket and clothes on the carpet" loading="lazy" width="1200" height="900">
         </div>
         <div class="body">
           <h3>The serial killer</h3>
@@ -446,12 +448,7 @@ footer a{color:var(--cream)}
 
       <div class="shame-card">
         <div class="shame-img">
-          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
-            <path d="M52 116V96h96v20"/><path d="M52 106h96"/>
-            <path d="M100 96V62"/><circle cx="100" cy="56" r="6"/>
-            <path d="M34 116h132"/>
-          </svg>
+          <img src="img/minimalist.jpg" alt="A low bed with rumpled bedding against blank white walls, lit by a single clip lamp" loading="lazy" width="1200" height="900">
         </div>
         <div class="body">
           <h3>The minimalist</h3>
@@ -461,13 +458,7 @@ footer a{color:var(--cream)}
 
       <div class="shame-card">
         <div class="shame-img">
-          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
-            <path d="M38 116V88h60v28"/><path d="M38 96h60"/>
-            <path d="M116 116V78h20v38M136 78h18v38"/>
-            <path d="M120 78v-8h12v8"/>
-            <path d="M30 116h140"/><path d="M60 70h30v14H60z"/>
-          </svg>
+          <img src="img/bachelor-pad.jpg" alt="An empty carpeted living room with one leather recliner and a TV on a glass stand" loading="lazy" width="1200" height="900">
         </div>
         <div class="body">
           <h3>The bachelor pad</h3>
@@ -477,12 +468,7 @@ footer a{color:var(--cream)}
 
       <div class="shame-card">
         <div class="shame-img">
-          <svg viewBox="0 0 200 150" fill="none" stroke="#AE0504" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="18" y="34" width="164" height="82" rx="3" opacity=".35"/>
-            <path d="M46 116V92h108v24"/><path d="M46 100h108"/>
-            <rect x="78" y="56" width="44" height="26" rx="2"/>
-            <path d="M30 116h140"/><path d="M100 82v10"/>
-          </svg>
+          <img src="img/npc.jpg" alt="A grey bedroom containing only a desk, a monitor, an office chair and a bed" loading="lazy" width="1200" height="900">
         </div>
         <div class="body">
           <h3>The NPC</h3>
