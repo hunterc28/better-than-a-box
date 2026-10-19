@@ -43,8 +43,8 @@ p{margin:0 0 1.1em}
 a{color:var(--red)}
 .script{font-family:var(--script);text-transform:none;letter-spacing:.06em}
 .eyebrow{
-  font-family:var(--display);text-transform:uppercase;letter-spacing:.22em;
-  font-size:.78rem;font-weight:500;color:var(--blue);margin:0 0 14px
+  font-family:var(--display);text-transform:uppercase;letter-spacing:.15em;
+  font-size:clamp(1.05rem,2.3vw,1.4rem);font-weight:500;color:var(--blue);margin:0 0 18px
 }
 .lede{font-size:clamp(1.05rem,2.3vw,1.3rem);line-height:1.5}
 
@@ -101,7 +101,7 @@ section:first-of-type{border-top:none}
 .hero .kick{font-family:var(--script);color:var(--blue);font-size:clamp(1.2rem,3vw,1.75rem);line-height:1.3;margin-top:16px;position:relative}
 .hero .tag{
   font-family:var(--display);text-transform:uppercase;letter-spacing:.2em;
-  font-size:clamp(.7rem,2vw,.9rem);color:var(--blue);margin-bottom:20px;position:relative
+  font-size:clamp(.92rem,2.2vw,1.18rem);color:var(--blue);margin-bottom:22px;position:relative
 }
 .hero .pitch{max-width:640px;position:relative}
 .hero .pitch p{font-size:clamp(1.1rem,2.6vw,1.45rem);line-height:1.45}
@@ -116,15 +116,21 @@ section:first-of-type{border-top:none}
 @media(max-width:1080px){.hero-art{display:none}}
 @media(max-width:620px){.hero-frame{inset:22px 10px 16px}}
 
-/* ---------- hook dividers / closing band (added per copy-edits v2) ---------- */
+/* ---------- delivery add-on ---------- */
+.addon{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;
+  margin-top:28px;border:var(--rule);border-radius:10px;padding:clamp(22px,3vw,30px);background:var(--cream)}
+.addon-copy{flex:1 1 320px}
+.addon-copy h3{color:var(--red);font-size:1.15rem;margin-bottom:8px}
+.addon-copy p{margin:0;font-size:.98rem}
+.addon-price{font-family:var(--display);text-transform:uppercase;color:var(--red);
+  font-size:clamp(1.3rem,3vw,1.9rem);letter-spacing:.03em;line-height:1.15;white-space:nowrap}
+
+/* ---------- hook dividers ---------- */
 .hookband{background:var(--red);color:var(--cream);padding:40px 24px;text-align:center;border-top:none}
 .hookband p{margin:0;font-family:var(--script);font-size:clamp(1.45rem,4.2vw,2.5rem);line-height:1.3;letter-spacing:.03em}
-.closing{text-align:center}
-.closing h2{max-width:20ch;margin:0 auto}
-.closing .sub{margin-top:18px;font-size:clamp(1.05rem,2.4vw,1.3rem)}
-.closing .cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
 .brunch{text-align:center;margin-top:46px;font-family:var(--display);text-transform:uppercase;color:var(--red);letter-spacing:.04em;font-size:clamp(1.15rem,2.9vw,1.85rem);line-height:1.25}
 .quizlede{margin-top:22px;font-weight:500}
+.shamefoot{margin-top:40px;font-family:var(--script);font-size:clamp(1.4rem,3.6vw,2.2rem);color:var(--blue);line-height:1.3}
 
 /* ---------- hall of shame ---------- */
 .shame{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:40px}
@@ -170,13 +176,12 @@ section:first-of-type{border-top:none}
 }
 .step h3{color:var(--red);margin-bottom:8px;font-size:1.1rem}
 .step p{font-size:.98rem;margin:0}
-.howfoot{margin-top:44px;font-family:var(--script);font-size:clamp(1.3rem,3.4vw,2rem);color:var(--blue);line-height:1.25}
 
 /* ---------- alternatives comparison (added per messaging brief) ---------- */
 .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:44px}
 .vscard{border:var(--rule);border-radius:8px;padding:24px;background:var(--cream);display:flex;flex-direction:column}
 .vscard.us{background:var(--pale);border-width:2.5px}
-.vscard .tagline{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--blue);margin-bottom:10px}
+.vscard .tagline{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:.95rem;color:var(--blue);margin-bottom:10px}
 .vscard .pick{margin-top:auto;padding-top:16px}
 .vscard h3{color:var(--red);font-size:1.05rem;margin-bottom:10px}
 .vscard p{margin:0;font-size:.98rem}
@@ -225,7 +230,7 @@ footer a{color:var(--cream)}
 </style>
 </head>
 <body>
-<div class="todo">DRAFT — placeholders left to fill: <b>Instagram handle</b>, <b>contact email</b>, <b>Zelle details</b>, <b>form links</b>, <b>hall-of-shame photos</b>.</div>
+<div class="todo">DRAFT — placeholders left to fill: <b>Instagram handle</b>, <b>contact email</b>, <b>Zelle details</b>, <b>form links</b>, <b>delivery pricing</b>.</div>
 
 <nav>
   <div class="wrap">
@@ -294,8 +299,8 @@ footer a{color:var(--cream)}
       </div>
       <div class="vscard us">
         <div class="tagline">From $50</div>
-        <h3>Ask us</h3>
-        <p>Five hand-picked listings for your actual space, your actual budget, in three days. Plus the message to send the seller, so you don't have to write it.</p>
+        <h3>Good Taste</h3>
+        <p>Hand-picked options for your actual space, your actual budget, in three days. Because you don't have the time or the <s>vision</s></p>
         <p class="pick"><a href="#pricing" class="btn">Find me furniture</a></p>
       </div>
     </div>
@@ -343,7 +348,7 @@ footer a{color:var(--cream)}
 
 <!-- hook divider (copy-edits v2 §3) -->
 <section class="hookband">
-  <p>Parents visiting Sunday and your nightstand is a moving box?</p>
+  <p>Your date doesn't fear for their life when they see your bedroom.</p>
 </section>
 
 <!-- ===================== WHY US ===================== -->
@@ -384,7 +389,6 @@ footer a{color:var(--cream)}
         <p>Message the sellers, arrange pickup, and welcome to having a real apartment. We'll send you a copy-paste template so you don't even have to think.</p>
       </div>
     </div>
-    <p class="howfoot">Your date doesn't fear for their life when they see your bedroom.</p>
   </div>
 </section>
 
@@ -404,7 +408,7 @@ footer a{color:var(--cream)}
           <li>Each one curated to your space, style, and budget</li>
           <li>Copy-paste seller message template, because you're not going to write one yourself</li>
           <li>One free swap if your top pick sells before you grab it</li>
-          <li>Delivered within 3 days</li>
+          <li>Options delivered in 3 days</li>
         </ul>
         <a href="#" class="btn" data-form="single">Find me adult furniture</a>
       </div>
@@ -418,10 +422,18 @@ footer a{color:var(--cream)}
           <li>Delivered as a styled doc with rationale, layout, and shopping order</li>
           <li>Copy-paste seller messages and a "where to start" guide for the chronically overwhelmed</li>
           <li>One free swap per piece if top picks sell out</li>
-          <li>Delivered within 7 days</li>
+          <li>Options delivered in 7 days</li>
         </ul>
         <a href="#" class="btn blue" data-form="room">Get my room guest ready</a>
       </div>
+    </div>
+
+    <div class="addon">
+      <div class="addon-copy">
+        <h3>Add delivery</h3>
+        <p>Don't own a van, and neither does anyone you'd ask. We'll arrange pickup from the seller and get it through your door and up your stairs. Quoted per job once we know the piece and the address.</p>
+      </div>
+      <div class="addon-price">from $TBD</div>
     </div>
 
     <p class="bothnote">Both tiers: pay upfront · NYC only for now (Manhattan + Brooklyn) · one free revision if we miss the brief</p>
@@ -478,6 +490,7 @@ footer a{color:var(--cream)}
     </div>
 
 
+    <p class="shamefoot">Housewarming in two weeks and nothing's warmed?</p>
   </div>
 </section>
 
@@ -536,17 +549,7 @@ footer a{color:var(--cream)}
   </div>
 </section>
 
-<!-- ===================== CLOSING BAND (copy-edits v2 §11) ===================== -->
-<section class="sec-blue closing" id="closing">
-  <div class="narrow">
-    <h2>Housewarming in two weeks and nothing's warmed?</h2>
-    <p class="sub">Your place is about to have an audience.</p>
-    <div class="cta">
-      <a href="#" class="btn" data-form="single">Find me adult furniture</a>
-      <a href="#" class="btn blue" data-form="room">Get my room guest ready</a>
-    </div>
-  </div>
-</section>
+
 
 <!-- ===================== FOOTER ===================== -->
 <footer>
