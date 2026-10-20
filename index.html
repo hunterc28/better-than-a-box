@@ -225,7 +225,7 @@ footer a{color:var(--cream)}
 </style>
 </head>
 <body>
-<div class="todo">DRAFT — placeholders left to fill: <b>Zelle details</b>, <b>shopper form</b>.</div>
+<div class="todo">DRAFT — placeholders left to fill: <b>Zelle details</b>.</div>
 
 <nav>
   <div class="wrap">
@@ -543,7 +543,7 @@ footer a{color:var(--cream)}
     <p class="kicker" style="margin-top:22px">Do you have above average taste? Do your friends ask you which lamp to buy? Do you walk into someone's apartment and know what's wrong before you take your coat off?</p>
     <p style="margin-top:24px">We're building a network of people with great taste who want to source cool furniture for clients in their city. If "scrolling Marketplace and getting paid for it" sounds like your kind of side hustle, get on the list.</p>
     <p>We're not hiring yet — but we will be, and we'll reach out when we're ready to bring on shoppers in your area.</p>
-    <p style="margin-top:26px"><a href="#" class="btn" data-form="shopper">Get on the list</a></p>
+    <p style="margin-top:26px"><a href="https://tally.so/r/dbW0vy" target="_blank" rel="noopener" class="btn" data-form="shopper">Get on the list</a></p>
   </div>
 </section>
 
@@ -622,15 +622,6 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   }
 })();
 
-/* form buttons — placeholder until intake forms are live */
-document.querySelectorAll('[data-form]').forEach(function(el){
-  var href = el.getAttribute('href') || '';
-  if (href.indexOf('http') === 0) return;   // real form is wired up
-  el.addEventListener('click', function(e){
-    e.preventDefault();
-    alert("The intake form isn't wired up yet — this is where the " + el.dataset.form + " form will open.");
-  });
-});
 </script>
 </body>
 </html>
