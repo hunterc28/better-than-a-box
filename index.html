@@ -409,7 +409,7 @@ footer a{color:var(--cream)}
           <li>One free swap if your top pick sells before you grab it</li>
           <li>Options delivered in 3 days</li>
         </ul>
-        <a href="#" class="btn" data-form="single">Find me adult furniture</a>
+        <a href="https://tally.so/r/aONpY2" class="btn" data-form="single" data-tally-open="aONpY2" data-tally-layout="modal" data-tally-width="720" data-tally-overlay="1" data-tally-auto-close="0">Find me adult furniture</a>
       </div>
 
       <div class="tier hi">
@@ -559,7 +559,7 @@ footer a{color:var(--cream)}
       </div>
       <div class="fcol">
         <h4>Get started</h4>
-        <a href="#" data-form="single">Quick Fix — $50</a>
+        <a href="https://tally.so/r/aONpY2" data-form="single" data-tally-open="aONpY2" data-tally-layout="modal" data-tally-width="720" data-tally-overlay="1" data-tally-auto-close="0">Quick Fix — $50</a>
         <a href="#" data-form="room">Room Refresh — $250</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -623,12 +623,23 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 })();
 
 /* form buttons — placeholder until intake forms are live */
+/* Tally's modal collapses to 1px on narrow screens, so below 820px we drop the
+   popup attribute and let the button follow its href to the full-page form. */
+if (window.innerWidth < 820) {
+  document.querySelectorAll('[data-tally-open]').forEach(function(el){
+    el.removeAttribute('data-tally-open');
+  });
+}
+
 document.querySelectorAll('[data-form]').forEach(function(el){
+  var href = el.getAttribute('href') || '';
+  if (href.indexOf('http') === 0) return;   // real form is wired up
   el.addEventListener('click', function(e){
     e.preventDefault();
     alert("The intake form isn't wired up yet — this is where the " + el.dataset.form + " form will open.");
   });
 });
 </script>
+<script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
