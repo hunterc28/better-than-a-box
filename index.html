@@ -104,6 +104,16 @@ section:first-of-type{border-top:none}
 .hero-inner{
   position:relative;padding:76px clamp(38px,5vw,60px) 88px;max-width:1080px;margin:0 auto;
 }
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:1000px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:48px}}
+.hero-shots{position:relative;max-width:460px;margin:0 auto}
+.hero-shots img{width:100%;height:auto;display:block;border-radius:4px}
+.hero-shots figure{margin:0}
+.hero-shots figcaption{
+  margin-top:10px;font-family:var(--script);color:var(--blue);
+  font-size:clamp(1rem,2.4vw,1.3rem);line-height:1.25
+}
+@media(min-width:1000px){.hero-shots{margin:0 0 0 auto}}
 .hero-frame{
   position:absolute;inset:28px 24px 24px;border:var(--rule);border-radius:14px;pointer-events:none
 }
@@ -124,16 +134,11 @@ section:first-of-type{border-top:none}
   font-size:1.05rem;color:var(--red);margin:26px 0 22px;position:relative
 }
 .hero .cta{display:flex;flex-wrap:wrap;gap:14px;position:relative}
-.hero-art{
-  position:absolute;right:26px;bottom:24px;width:min(38%,330px);opacity:.95;pointer-events:none
-}
-@media(max-width:1080px){.hero-art{display:none}}
 @media(max-width:620px){.hero-frame{inset:22px 10px 16px}}
 
 .rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-top:40px}
 .rec figure{margin:0;border:var(--rule);border-radius:10px;overflow:hidden;background:#fff}
 .rec img{width:100%;height:auto;display:block}
-.recfoot{margin-top:34px;font-family:var(--script);font-size:clamp(1.3rem,3.4vw,2rem);color:var(--blue);line-height:1.3}
 
 /* ---------- delivery add-on ---------- */
 .addon{margin-top:28px;border:var(--rule);border-radius:10px;padding:clamp(22px,3vw,30px);background:var(--cream)}
@@ -261,6 +266,8 @@ footer a{color:var(--cream)}
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-frame"></div>
+    <div class="hero-grid">
+      <div class="hero-words">
     <div class="tag">Hand-picked furniture · mostly secondhand · NYC</div>
     <h1>Pregame on Saturday and your TV's still on a cardboard box?</h1>
     <div class="pitch">
@@ -272,45 +279,16 @@ footer a{color:var(--cream)}
       <a href="#pricing" class="btn">Find me furniture</a>
       <a href="#pricing" class="btn ghost">Please just fix all of it</a>
     </div>
+      </div>
 
-    <svg class="hero-art" viewBox="0 0 300 260" fill="none" stroke="#AE0504" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <g transform="translate(-14,0)">
-        <!-- TV -->
-        <rect x="100" y="40" width="110" height="70" rx="3"/>
-        <rect x="107" y="47" width="96" height="51" rx="2"/>
-        <path d="M130 110 L120 136M180 110 L190 136"/>
-        <path d="M111 136h18M181 136h18"/>
-        <!-- cardboard box -->
-        <path d="M70 150h160v85H70z"/>
-        <path d="M70 150l28-22h160l-28 22"/>
-        <path d="M230 150l28-22v85l-28 22"/>
-        <!-- shipping label -->
-        <rect x="96" y="176" width="58" height="34" rx="2"/>
-        <path d="M105 188h40M105 198h26"/>
-      </g>
-    </svg>
-  </div>
-</section>
-
-<!-- ===================== RECEIPTS ===================== -->
-<section id="receipts">
-  <div class="wrap">
-    <div class="eyebrow">Receipts</div>
-    <h2>Real rooms, real prices</h2>
-    <p class="lede" style="max-width:58ch;margin-top:18px">Every piece here came off Marketplace, a farmer's market, or a guy on the street. No showroom, no shipping, no $900 particle board.</p>
-
-    <div class="rec">
-      <figure>
-        <img src="img/receipts-shelf.jpg" width="933" height="1400" loading="lazy"
-             alt="A wall of white shelving styled with books and a lamp, each item labelled with what it cost and where it came from — $30 and $10 from Facebook Marketplace, $300 of shelving from Home Depot, $200 stools.">
-      </figure>
-      <figure>
-        <img src="img/receipts-corner.jpg" width="933" height="1400" loading="lazy"
-             alt="A living room corner with a navy leather sofa, Wassily chair and fiddle leaf fig, each labelled with its price — a $400 sofa and $75 chair from Facebook Marketplace, $10 print from a street vendor.">
-      </figure>
+      <div class="hero-shots">
+        <figure>
+          <img src="img/receipts-corner.jpg" width="825" height="1046" fetchpriority="high"
+               alt="A living room corner with a navy leather sofa, Wassily chair and fiddle leaf fig, each piece labelled with its price and source — a $400 sofa and $75 chair from Facebook Marketplace, a $10 print from a street vendor.">
+          <figcaption>Real rooms. Real prices. Mostly strangers on Marketplace.</figcaption>
+        </figure>
+      </div>
     </div>
-
-    <p class="recfoot">This is the kind of thing we'd find for you.</p>
   </div>
 </section>
 
@@ -584,8 +562,6 @@ footer a{color:var(--cream)}
     <p style="margin-top:26px"><a href="https://tally.so/r/dbW0vy" target="_blank" rel="noopener" class="btn" data-form="shopper">Get on the list</a></p>
   </div>
 </section>
-
-
 
 <!-- ===================== FOOTER ===================== -->
 <footer>
