@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Better Than A Box — we tell you exactly what furniture to buy</title>
 <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://imbetterthanabox.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Better Than A Box">
+<meta property="og:url" content="https://imbetterthanabox.com/">
+<meta property="og:title" content="Better Than A Box">
+<meta property="og:description" content="We tell you exactly what furniture to buy. Hand-picked, mostly secondhand. $50 a piece, $250 a room. NYC.">
+<meta property="og:image" content="https://imbetterthanabox.com/img/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A living room corner with price tags on every piece, next to the words: we tell you exactly what furniture to buy.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Better Than A Box">
+<meta name="twitter:description" content="We tell you exactly what furniture to buy. Hand-picked, mostly secondhand. $50 a piece, $250 a room. NYC.">
+<meta name="twitter:image" content="https://imbetterthanabox.com/img/social-card.jpg">
 <meta name="description" content="We find you cool, quality secondhand furniture so your apartment doesn't look like your freshman dorm with a Wall Street paycheck. $50 a piece, $250 a room. NYC.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +129,11 @@ section:first-of-type{border-top:none}
 }
 @media(max-width:1080px){.hero-art{display:none}}
 @media(max-width:620px){.hero-frame{inset:22px 10px 16px}}
+
+.rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-top:40px}
+.rec figure{margin:0;border:var(--rule);border-radius:10px;overflow:hidden;background:#fff}
+.rec img{width:100%;height:auto;display:block}
+.recfoot{margin-top:34px;font-family:var(--script);font-size:clamp(1.3rem,3.4vw,2rem);color:var(--blue);line-height:1.3}
 
 /* ---------- delivery add-on ---------- */
 .addon{margin-top:28px;border:var(--rule);border-radius:10px;padding:clamp(22px,3vw,30px);background:var(--cream)}
@@ -273,6 +292,28 @@ footer a{color:var(--cream)}
   </div>
 </section>
 
+<!-- ===================== RECEIPTS ===================== -->
+<section id="receipts">
+  <div class="wrap">
+    <div class="eyebrow">Receipts</div>
+    <h2>Real rooms, real prices</h2>
+    <p class="lede" style="max-width:58ch;margin-top:18px">Every piece here came off Marketplace, a farmer's market, or a guy on the street. No showroom, no shipping, no $900 particle board.</p>
+
+    <div class="rec">
+      <figure>
+        <img src="img/receipts-shelf.jpg" width="933" height="1400" loading="lazy"
+             alt="A wall of white shelving styled with books and a lamp, each item labelled with what it cost and where it came from — $30 and $10 from Facebook Marketplace, $300 of shelving from Home Depot, $200 stools.">
+      </figure>
+      <figure>
+        <img src="img/receipts-corner.jpg" width="933" height="1400" loading="lazy"
+             alt="A living room corner with a navy leather sofa, Wassily chair and fiddle leaf fig, each labelled with its price — a $400 sofa and $75 chair from Facebook Marketplace, $10 print from a street vendor.">
+      </figure>
+    </div>
+
+    <p class="recfoot">This is the kind of thing we'd find for you.</p>
+  </div>
+</section>
+
 <!-- ===================== WHY NOT ===================== 
      Added per messaging brief: three-column alternatives comparison.
      No equivalent existed on the live site. -->
@@ -296,7 +337,7 @@ footer a{color:var(--cream)}
       </div>
       <div class="vscard us">
         <h3>Better Than A Box</h3>
-        <p>Hand-picked options for your actual space, your actual budget, in three days. Because you don't have the time or the <s>vision</s></p>
+        <p>Hand-picked options for your actual space, your actual budget, in three days. Because you don't have the time or the ~vision~</p>
         <p class="pick"><a href="#pricing" class="btn">Find me furniture</a></p>
       </div>
     </div>
