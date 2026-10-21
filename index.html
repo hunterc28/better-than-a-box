@@ -202,6 +202,18 @@ section:first-of-type{border-top:none}
 .vscard h3{color:var(--red);font-size:1.05rem;margin-bottom:10px}
 .vscard p{margin:0;font-size:.98rem}
 
+.how-grid{display:grid;gap:40px;align-items:center}
+@media(min-width:1000px){
+  .how-grid{grid-template-columns:.95fr 1.05fr;gap:52px}
+  .how-grid .how-shot{grid-column:1;grid-row:1}
+  .how-grid .how-steps{grid-column:2;grid-row:1}
+  .how-grid .steps{grid-template-columns:1fr;gap:26px;margin-top:0}
+}
+.how-shot{margin:0;max-width:460px}
+.how-shot img{width:100%;height:auto;display:block;border-radius:4px}
+.how-shot figcaption{margin-top:10px;font-family:var(--script);color:var(--blue);
+  font-size:clamp(1rem,2.4vw,1.3rem);line-height:1.25}
+
 /* ---------- pricing ---------- */
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:44px}
 .tier{border:var(--rule);border-radius:10px;padding:clamp(24px,3.4vw,34px);background:var(--cream);display:flex;flex-direction:column}
@@ -384,6 +396,8 @@ footer a{color:var(--cream)}
   <div class="wrap">
     <div class="eyebrow">How it works</div>
     <h2>Three steps</h2>
+    <div class="how-grid">
+      <div class="how-steps">
     <div class="steps">
       <div class="step">
         <div class="num">01</div>
@@ -400,6 +414,14 @@ footer a{color:var(--cream)}
         <h3>You grab it</h3>
         <p>Message the sellers, arrange pickup, and welcome to having a real apartment. We'll send you a copy-paste template so you don't even have to think.</p>
       </div>
+    </div>
+      </div>
+
+      <figure class="how-shot">
+        <img src="img/receipts-shelf-v2.jpg" width="866" height="1073" loading="lazy"
+             alt="A wall of white shelving styled with books, glassware, flowers and a lamp above two wooden bar stools, each item labelled with what it cost and where it came from.">
+        <figcaption>One wall, $611 all in — and $300 of that was the shelving.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
